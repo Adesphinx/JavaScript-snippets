@@ -56,7 +56,7 @@
 **[⬆ Back to Top](#table-of-contents)**
 ### How to generate a random number in a given range
 ```javascript
-// Returns a random number(float) between min (inclusive) and max (exclusive) 
+// Returns a random number(float) between min (inclusive) and max (exclusive)
 
 const getRandomNumber = (min, max) => Math.random() * (max - min) + min;
 
@@ -117,8 +117,8 @@ console.log('difference',difference(firstArr, secondArr))
 ### Convert truthy falsy to boolean
 
 ```javascript
-const myVar = null; 
-const mySecondVar = 1; 
+const myVar = null;
+const mySecondVar = 1;
 
 console.log( Boolean(myVar) ) // false
 console.log( !!myVar ) // false
@@ -150,8 +150,8 @@ Array(6).join('👽')
 ### Check how long an operation takes
 ```javascript
 //The performance.now() method returns a DOMHighResTimeStamp, measured in milliseconds.
-//performance.now() is relative to page load and more precise in orders of magnitude. 
-//Use cases include benchmarking and other cases where a high-resolution time is required 
+//performance.now() is relative to page load and more precise in orders of magnitude.
+//Use cases include benchmarking and other cases where a high-resolution time is required
 //such as media (gaming, audio, video, //etc.)
 
 var startTime = performance.now();
@@ -226,7 +226,7 @@ function copyToClipboard() {
   const copyText = document.getElementById("myInput");
   copyText.select();
   document.execCommand("copy");
-  
+
 }
 //new API
 function copyToClipboard(){
@@ -254,7 +254,7 @@ console.log(degree) //Masters
 ```
 
 **[⬆ Back to Top](#table-of-contents)**
-###  URLSearchParams 
+###  URLSearchParams
 
 
 ```javascript
@@ -283,14 +283,14 @@ const countMyFruits = myFruits.reduce((countFruits,fruit) => {
  },{} )
  console.log(countMyFruits)
  // { Apple:3, Banana:1, Mango:2, Orange:1 }
- 
+
  //seconf option
  const fruitsCounter = {};
- 
+
  for( const fruit of myFruits ){
    fruitsCounter[fruit] = fruitsCounter[fruit] ? fruitsCounter[fruit]+1 :1;
  }
-  
+
  console.log(fruitsCounter)
  // { Apple:3, Banana:1, Mango:2, Orange:1 }
 ```
@@ -303,7 +303,7 @@ const countMyFruits = myFruits.reduce((countFruits,fruit) => {
 
 //There are cases where you want the destructured variable to have a different name than the property name
 
-const obj = { 
+const obj = {
   name: "JSsnippets"													
 };
 
@@ -340,7 +340,7 @@ Object.is(foo, bar);         // false
 
 
 ```javascript
-const obj = { 
+const obj = {
   name: "JSsnippets",
   age:29,
   address:{
@@ -370,12 +370,12 @@ Object.isFrozen(obj) //true
 
 
 ```javascript
-const obj = { 
+const obj = {
   name: "JSsnippets",
   age:29,
 };
 
-//Object.entries() method is used to return an array consisting of enumerable property 
+//Object.entries() method is used to return an array consisting of enumerable property
 //[key, value] pairs of the object which are passed as the parameter.
 
 for(let [key,value] of Object.entries(obj)){
@@ -416,7 +416,7 @@ window.addEventListener('contextmenu', ()=>{
 //Async is more useful when you really don't care when the script loads and nothing else that is user dependent depends upon that script loading.(for scripts likes Google analytics)
 <script async src="myscript.js"></script>
 
-//With defer, browser will run your script when the page finished parsing. (not necessary finishing downloading all image files. 
+//With defer, browser will run your script when the page finished parsing. (not necessary finishing downloading all image files.
 <script defer src="myscript.js"></script>
 ```
 
@@ -454,16 +454,16 @@ console.log(carColor);
 //Now this new optional chaining operator will let us be even more fancy:
 
 const newCarColor = car?.name?.color;
-console.log(newCarColor) 
+console.log(newCarColor)
 //undefined- no error
-					
+
 //You can use this syntax today using @babel/plugin-proposal-optional-chaining
 ```
 
 **[⬆ Back to Top](#table-of-contents)**
 ###  globalThis
 ```javascript
-Accessing the global property in JavaScript has always posed some difficulty. This is because 
+Accessing the global property in JavaScript has always posed some difficulty. This is because
 different platforms have different ways to access it.
 
 Client-side JavaScript uses window or self
@@ -472,7 +472,7 @@ Node.js uses global
 
 Web workers use self
 
-The globalThis property provides a standard way of accessing the global 'this' value across environments. you can access the global object in a consistent manner without having to know which environment the code is being run in. 
+The globalThis property provides a standard way of accessing the global 'this' value across environments. you can access the global object in a consistent manner without having to know which environment the code is being run in.
 
 console.log(globalThis) //get the global this depends on your environment
 
@@ -596,7 +596,7 @@ observer.observe(image);
 ```
 
 **[⬆ Back to Top](#table-of-contents)**
-### Notify when element size is changed 
+### Notify when element size is changed
 see our codepen: https://codepen.io/JSsnippets/pen/dyYoYVX
 ```javascript
 const foo = document.getElementById("foo");
@@ -620,10 +620,10 @@ see our codepen: https://codepen.io/JSsnippets/pen/gOapPzq
 const video =  document.getElementById("my-video");
 
 const onVisibilitychange =()=>{
-   return document.hidden 
-     ? video.pause() 
+   return document.hidden
+     ? video.pause()
      : video.play();
-} 
+}
 
 document.addEventListener("visibilitychange", onVisibilitychange)
 
@@ -674,7 +674,7 @@ pasteBox.onpaste = (e) => {
 
 
 **[⬆ Back to Top](#table-of-contents)**
-### The void operator 
+### The void operator
 The void operator evaluates the given expression and then returns undefined.
 ```javascript
 
@@ -691,7 +691,7 @@ void anyfunction(); 	//returns undefined
 
 
 **[⬆ Back to Top](#table-of-contents)**
-### replaceAll 
+### replaceAll
 the method string.replaceAll(search, replaceWith) replaces all appearances of search string with replaceWith.
 ```javascript
 
@@ -725,7 +725,7 @@ const updatedStr = str.replaceAll('example', 'snippet'); //'this is a JSsnippets
 
 
 **[⬆ Back to Top](#table-of-contents)**
-### Required Function Params 
+### Required Function Params
 Expanding on the default parameter technique, we can mark a parameter as mandatory
 
 ```javascript
@@ -758,7 +758,7 @@ console.log(getPage());
 <input type="number" id="JSsnippets" onkeyup="checkMyType(event)" />
 
 function checkMyType(event){
-  
+
   console.log(typeof event.target.value) // string
   console.log(typeof event.target.valueAsNumber ) // number
 
@@ -913,7 +913,7 @@ const startSpeaking=()=>{
 
 	let msg = document.getElementById("text-to-speech").value;
 	let speech = new SpeechSynthesisUtterance();
-	
+
 	speech.lang = "en-US";
 	speech.text = msg;
 	speech.volume = 1;
@@ -925,3 +925,6 @@ const startSpeaking=()=>{
 
 
 ```
+/* Testing commit from Atom
+
+and the other things I need to do */
